@@ -38,7 +38,7 @@ controller.hears(["([0-9]+) available"], ["direct_mention"], function (bot, mess
 });
 
 // Get in on that pot!
-controller.hears(["o/"], ["ambient"], function (bot, message) {
+controller.hears(["o/", "O/"], ["ambient"], function (bot, message) {
 	if ('HandsUpMode' === state.listenMode) {
 		addUserFromMessage(message);
 	}
