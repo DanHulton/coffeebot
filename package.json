@@ -1,0 +1,19 @@
+{
+  "name": "coffeebot",
+  "version": "1.0.0",
+  "description": "Offer and order coffee.",
+  "main": "bot.js",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/DanHulton/coffeebot.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dan Hulton",
+  "license": "MIT",
+  "dependencies": {
+    "botkit": "0.0.7",
+    "dotenv": "^2.0.0"
+  }
+}
