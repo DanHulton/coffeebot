@@ -46,6 +46,13 @@ controller.hears(["o/"], ["ambient"], function (bot, message) {
 	}
 });
 
+// Not enough people interested?  Just finish the pot
+controller.hears(["finish"], ["direct_mention"], function(bot, message) {
+	if ('HandsUpMode' === state.listenMode) {
+		finish(message);
+	}
+});
+
 // Reset that pot
 controller.hears(["reset"], ["direct_mention"], function (bot, message) {
 	resetState();
@@ -84,15 +91,19 @@ function addUserFromMessage(message) {
 		// We're out!  Wrap it up!
 		} else {
 			bot.reply(message, name + "'s in.");
-			bot.reply(message, "That's it!  Here's who gets coffee:");
-
-			for (var i = 0; i < state.drinkers.length; i++) {
-				bot.reply(message, "- " + state.drinkers[i]);
-			}
-
-			resetState();
+			finish(message);
 		}
 	});
+}
+
+function finish(message) {
+	bot.reply(message, "That's it!  Here's who gets coffee:");
+
+	for (var i = 0; i < state.drinkers.length; i++) {
+		bot.reply(message, "- " + state.drinkers[i]);
+	}
+
+	resetState();
 }
 
 function resetState() {

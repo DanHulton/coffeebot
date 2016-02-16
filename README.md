@@ -29,6 +29,14 @@ Type the following in the channel:
 
 When all the spots are full, Coffeebot will print out the list of everyone who's in on the current pot and reset.
 
+## Finishing the pot early
+
+Are people taking too long to reply?  Type:
+
+    @coffeebot: finish
+
+Coffeebot will finish the current pot early.
+
 ## Resetting Coffeebot
 
 Did you start a pot that nobody seems to want?  Type:
