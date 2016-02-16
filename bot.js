@@ -9,8 +9,6 @@ var state = {
 	drinkers: []
 };
 
-console.log(process.env.NODE_ENV);
-
 var controller = Botkit.slackbot();
 var bot = controller.spawn({
   	token: process.env.SLACK_TOKEN
