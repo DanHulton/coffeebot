@@ -13,6 +13,10 @@ Invite your bot to your channel with:
 
     /invite @coffeebot
     
+Make sure your bot is running on a server by starting it with
+
+    nohup node bot.js &
+    
 ## Starting a pot
 
 Assuming you have 6 cups available, type the following in your channel:
