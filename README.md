@@ -12,17 +12,17 @@ Create a .env file in your coffeebot directory with the following in it:
 Invite your bot to your channel with:
 
     /invite @coffeebot
-    
+
 Make sure your bot is running on a server by starting it with
 
-    nohup node bot.js &
-    
+    nohup node monitor.js &
+
 ## Starting a pot
 
 Assuming you have 6 cups available, type the following in your channel:
 
     @coffeebot: 6 available
-    
+
 Coffeebot will start a pot and add you to the list.
 
 ## Getting in on that pot
